@@ -1,2 +1,5 @@
 # Docker container
 .node_modules
+
+# GatsbyJS
+./projects/*
