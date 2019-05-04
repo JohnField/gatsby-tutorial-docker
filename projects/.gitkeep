@@ -1,0 +1,26 @@
+{
+  "extends": ["eslint:recommended"],
+  "plugins": ["extra-rules", "json", "mocha", "prettier"],
+  "rules": {
+    "eqeqeq": "error",
+    "no-tabs": "error",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "object-shorthand": "error",
+    "spaced-comment": ["warn", "always"],
+    "extra-rules/camel_case": "warn",
+    "extra-rules/no-commented-out-code": "error",
+    "mocha/no-exclusive-tests": "error",
+    "prettier/prettier": "error"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  }
+}

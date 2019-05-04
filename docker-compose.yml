@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  app:
+    image: node:carbon
+    container_name: gatsby-container
+    working_dir: /gatsby-project
+    volumes:
+      - ./:/gatsby-container
+      - ./projects/${GATSBY_PROJECT}:/gatsby-project
+    ports:
+      - "8000:8000"
+    command: [ "/bin/sh", "-c", "yarn install --frozen-lockfile; yarn global add gatsby-cli surge; gatsby develop --host 0.0.0.0 --port 8000"]
+    environment:
+      - NODE_ENV=development
+      - GATSBY_PROJECT=hello-world
