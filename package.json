@@ -5,6 +5,7 @@
     "start": "/gatsby-container/gatsby develop --host 0.0.0.0 --port 8000"
   },
   "dependencies": {
+    "gatsby": "^2.4.2",
     "gatsby-cli": "^2.5.12",
     "surge": "^0.20.4"
   },

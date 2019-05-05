@@ -10,8 +10,8 @@ services:
       - ./projects/${GATSBY_PROJECT}:/gatsby-project
     ports:
       - "8000:8000"
-    # Support gatsby and workflow tools outside of project itself, preferring lockfile over global.
-    command: [ "/bin/sh", "-c", "yarn --cwd /gatsby-container add gatsby-cli surge --frozen-lockfile; gatsby develop --host 0.0.0.0 --port 8000"]
+    # Use gatsby and workflow tools outside of individual projects.
+    command: [ "/bin/sh", "-c", "yarn --cwd /gatsby-container global add gatsby gatsby-cli surge; gatsby develop --host 0.0.0.0 --port 8000"]
     environment:
       - NODE_ENV=development
       - GATSBY_PROJECT=hello-world
